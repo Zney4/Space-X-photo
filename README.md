@@ -19,7 +19,7 @@ pip install -r requirements.txt
 BITLY_TOKEN=example
 ```
 
-Битли токен можно получить на этом сайте: https://app.bitly.com/
+Api токен можно получить на этом сайте: https://app.bitly.com/](https://api.nasa.gov/
 
 ## Пример запуска кода
 ```python
@@ -28,9 +28,7 @@ python api.py --url bit.ly/3w4XIZ9
 
 ### Пример результата
 ```
-Namespace(url='bit.ly/49xhN8R')
-info_url: 200
-Колличество кликов: 4
+
 ```
 
 
