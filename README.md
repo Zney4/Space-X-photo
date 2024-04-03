@@ -28,7 +28,6 @@ python api.py --url bit.ly/3w4XIZ9
 
 ### Пример результата
 ```
-
 ```
 
 
