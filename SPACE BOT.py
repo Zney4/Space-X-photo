@@ -20,7 +20,7 @@ if __name__ == "__main__":
     chat_id = os.environ["CHAT_ID"]
     directory = os.listdir("image/")
     print(directory)
-    timer_public = 5
+    timer_public = 14400
     random_photo = random.shuffle(directory)
     print(random_photo)
     print(directory)
