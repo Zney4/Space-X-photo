@@ -22,7 +22,7 @@ BITLY_TOKEN=example
 Api токен можно получить на этом сайте: https://app.bitly.com/](https://api.nasa.gov/
 
 ## Пример запуска кода
-```python
+```
 python api.py --url bit.ly/3w4XIZ9
 ```
 
