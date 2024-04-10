@@ -38,7 +38,7 @@ python FullCode_image_space.py
 ```
 SPACE BOT.py
 ```
-Чтоб бот заработал нам нужно заполнить в файле .env эти переменные 
+Для того чтобы бот заработал нам нужно заполнить в файле .env эти переменные 
 ```
 BOT_TOKEN=example
 CHAT_ID=example
