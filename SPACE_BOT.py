@@ -19,9 +19,6 @@ if __name__ == "__main__":
     bot = telegram.Bot(token=os.environ["BOT_TOKEN"])
     chat_id = os.environ["CHAT_ID"]
     directory = os.listdir("image/")
-    print(directory)
     timer_public = 14400
     random_photo = random.shuffle(directory)
-    print(random_photo)
-    print(directory)
     photo_puclic(chat_id, time)
