@@ -43,9 +43,8 @@ SPACE BOT.py
 BOT_TOKEN=example
 CHAT_ID=example
 ```
-Для того чтобы получить токен на нужно обратиться к BotFather в телеграме: https://t.me/BotFather.
-
-Но этого не достаточно нам нужно узнать chat_id собеседника с помощью этого бота: https://t.me/LeadConverterToolkitBot
+1. Для того чтобы получить токен для бота нам нужно обратиться к BotFather в телеграме: https://t.me/BotFather.
+2. Но этого не достаточно нам нужно узнать chat_id собеседника с помощью этого бота: https://t.me/LeadConverterToolkitBot.
 
 
 
