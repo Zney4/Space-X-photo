@@ -38,6 +38,16 @@ python FullCode_image_space.py
 ```
 SPACE BOT.py
 ```
+Чтоб бот заработал нам нужно заполнить в файле .env эти переменные 
+```
+BOT_TOKEN=example
+CHAT_ID=example
+```
+Для того чтобы получить токен на нужно обратиться к BotFather в телеграме: https://t.me/BotFather
+Но этого не достаточно нам нужно узнать chat_id собеседника с помощью этого бота: https://t.me/LeadConverterToolkitBot
+
+
+
 Бот в бесконечном цикле публикует случайное фото, которое находиться в папке image раз в 4 часа.
 
 
