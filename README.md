@@ -1,7 +1,7 @@
 # Загрузка фотографий SpaceX
 
 ## Короткое описание проекта
-SpaceX_photo.py - это код, который скачивает фотографии с сайта SpaceX, Nasa и т.д.
+FullCode_image_space.py - это код, который скачивает фотографии с сайта SpaceX, Nasa и т.д.
 
 ## Требования к окружению
 Python
@@ -23,7 +23,7 @@ Api токен можно получить на этом сайте: https://app
 
 ## Пример запуска кода
 ```
-python SpaceX_photo.py
+python FullCode_image_space.py
 ```
 
 ### Пример результата
