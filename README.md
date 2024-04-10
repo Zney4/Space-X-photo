@@ -14,9 +14,9 @@ pip install -r requirements.txt
 
 ## Переменные окружения
 Файл .env      
-В нём надо указать перменую с битли токеном.
+В нём надо указать перменую с api токеном.
 ```
-BITLY_TOKEN=example
+API_TOKEN=example
 ```
 
 Api токен можно получить на этом сайте: https://app.bitly.com/](https://api.nasa.gov/
