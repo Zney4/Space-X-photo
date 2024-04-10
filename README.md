@@ -23,7 +23,7 @@ Api токен можно получить на этом сайте: https://app
 
 ## Пример запуска кода
 ```
-python api.py --url bit.ly/3w4XIZ9
+python api.py 
 ```
 
 ### Пример результата
