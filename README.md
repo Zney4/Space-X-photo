@@ -42,7 +42,7 @@ SPACE BOT.py
 ```
 Для того чтобы бот заработал нам нужно заполнить в файле .env эти переменные 
 ```
-BOT_TOKEN=example
+TELEGRAM_BOT_TOKEN=example
 CHAT_ID=example
 ```
 1. Чтобы получить токен для бота нам нужно обратиться к BotFather в Телеграме: https://t.me/BotFather.
