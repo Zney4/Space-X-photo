@@ -6,7 +6,12 @@ from dotenv import load_dotenv
 
 
 def photo_public(chat_id, time):
+    while True:
+        bot.send_document(
+            chat_id=chat_id, document=open(f"image/{random.choice(path_image)}", "rb")
+        )
 
+        time.sleep(timer_public)
 
 
 if __name__ == "__main__":
@@ -16,10 +21,4 @@ if __name__ == "__main__":
     path_image = os.listdir("image/")
     timer_public = 14400
     random_photo = random.shuffle(path_image)
-
-    while True:
-        bot.send_document(
-            chat_id=chat_id, document=open(f"image/{random.choice(path_image)}", "rb")
-        )
-
-        time.sleep(timer_public)
+    photo_public(chat_id, time)
