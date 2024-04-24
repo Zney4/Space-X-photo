@@ -5,9 +5,6 @@ import random
 from dotenv import load_dotenv
 
 
-def photo_public(chat_id, time):
-
-
 
 if __name__ == "__main__":
     load_dotenv()
