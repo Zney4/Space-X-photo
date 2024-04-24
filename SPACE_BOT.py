@@ -21,4 +21,4 @@ if __name__ == "__main__":
     path_image = os.listdir("image/")
     timer_public = 14400
     random_photo = random.shuffle(path_image)
-    photo_puclic(chat_id, time)
+    photo_public(chat_id, time)
