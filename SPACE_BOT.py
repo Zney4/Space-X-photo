@@ -17,7 +17,7 @@ def photo_puclic(chat_id, time):
 if __name__ == "__main__":
     load_dotenv()
     bot = telegram.Bot(token=os.environ["TELEGRAM_BOT_TOKEN"])
-    chat_id = os.environ["CHAT_ID"]
+    chat_id = os.environ["TELEGRAM_CHAT_ID"]
     directory_image = os.listdir("image/")
     timer_public = 14400
     random_photo = random.shuffle(directory_image)
