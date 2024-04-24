@@ -5,7 +5,7 @@ import random
 from dotenv import load_dotenv
 
 
-def photo_puclic(chat_id, time):
+def photo_public(chat_id, time):
     while True:
         bot.send_document(
             chat_id=chat_id, document=open(f"image/{random.choice(path_image)}", "rb")
