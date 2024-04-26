@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 def photo_public(chat_id):
     while True:
         bot.send_document(
-            chat_id=chat_id, document=open(f"image/{random.choice(path_image)}", "rb")
+            chat_id=chat_id, document=with open(f"image/{random.choice(path_image)}", "rb")
         )
 
         time.sleep(timer_public)
