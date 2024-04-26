@@ -76,7 +76,7 @@ def EPIC_download(epic_image):
             file.write(photo)
 
 
-def donload_image_APOUD_nasa(day_image, file_f):
+def donload_image_APOUD_nasa(day_image, file_format):
     response = requests.get(day_image)
     response.raise_for_status()
 
@@ -85,7 +85,7 @@ def donload_image_APOUD_nasa(day_image, file_f):
 
 
 def breaks_file(day_image):
-    image_f = os.path.splitext(day_image)
+    image_format = os.path.splitext(day_image)
 
     return image_f[1]
 
@@ -107,6 +107,6 @@ if __name__ == "__main__":
     api_key = os.environ["API_KEY"]
     day_image = nasa_APOD(api_key)
     epic_image = nasa_EPIC(api_key)
-    file_f = format_file(day_image)
-    donload_image_APOUD_nasa(day_image, file_f)
+    file_format = breaks_file(day_image)
+    donload_image_APOUD_nasa(day_image, file_format)
     EPIC_download(epic_image)
