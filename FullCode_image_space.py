@@ -4,11 +4,6 @@ import datetime
 from dotenv import load_dotenv
 
 
-def check_file():
-    if not os.path.exists("image"):
-        os.makedirs("image")
-
-
 def donload_image(filename, url):
     response = requests.get(url)
     response.raise_for_status()
@@ -97,7 +92,10 @@ def format_file(day_image):
 
 if __name__ == "__main__":
     load_dotenv()
-    check_file()
+
+    if not os.path.exists("image"):
+        os.makedirs("image")
+    
     id = "5eb87d47ffd86e000604b38a"
     filename = "1.jpeg"
     url = "https://upload.wikimedia.org/wikipedia/commons/3/3f/HST-SM4.jpeg"
