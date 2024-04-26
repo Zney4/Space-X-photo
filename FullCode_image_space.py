@@ -84,7 +84,7 @@ def donload_image_APOUD_nasa(day_image, file_f):
         file.write(response.content)
 
 
-def format_file(day_image):
+def breaks_file(day_image):
     image_f = os.path.splitext(day_image)
 
     return image_f[1]
