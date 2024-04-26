@@ -29,7 +29,7 @@ def fetch_spacex_last_launch(space_photo_links, filename_space):
             file.write(response.content)
 
 
-def nasa_APOD(api_key):
+def APOD_nasa(api_key):
     params = {"api_key": api_key}
     response = requests.get("https://api.nasa.gov/planetary/apod", params=params)
     response.raise_for_status()
