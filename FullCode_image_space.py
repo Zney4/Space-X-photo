@@ -93,8 +93,7 @@ def format_file(day_image):
 if __name__ == "__main__":
     load_dotenv()
 
-    if not os.path.exists("image"):
-        os.makedirs("image")
+    os.makedirs("image", mode=0o777, exist_ok=True)
     
     id = "5eb87d47ffd86e000604b38a"
     filename = "1.jpeg"
