@@ -17,7 +17,7 @@ def get_photo(id):
     response.raise_for_status()
     return response.json()["links"]["flickr"]["original"]
 
-# выше универсальное       ниже распределить
+
 def fetch_spacex_last_launch(space_photo_links, filename_space):
     index = 0
     for photo in space_photo_links:
@@ -104,7 +104,7 @@ if __name__ == "__main__":
     filename_space = "spacex.jpg"
     fetch_spacex_last_launch(space_photo_links, filename_space)
 
-    api_key = os.environ["API_KEY"]
+    api_key = os.environ["NASA_API_KEY"]
     day_image = APOD_nasa(api_key)
     epic_image = nasa_EPIC(api_key)
     file_format = breaks_file(day_image)
