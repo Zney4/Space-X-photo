@@ -17,7 +17,7 @@ def get_photo(id):
     response.raise_for_status()
     return response.json()["links"]["flickr"]["original"]
 
-# выше универсальное       ниже распределить
+
 def fetch_spacex_last_launch(space_photo_links, filename_space):
     index = 0
     for photo in space_photo_links:
