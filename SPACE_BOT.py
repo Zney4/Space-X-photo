@@ -5,12 +5,10 @@ import random
 from dotenv import load_dotenv
 
 
-def photo_public(chat_id):
+def photo_public(chat_id, timer_public, image_in_path):
     while True:
-        bot.send_document(
-            chat_id=chat_id, document=with open(f"image/{random.choice(path_image)}", "rb")
-        )
-
+        with open(f"image/{random.choice(image_in_path)}", "rb") as f:
+            bot.send_photo(chat_id=chat_id, photo=f)
         time.sleep(timer_public)
 
 
@@ -18,7 +16,7 @@ if __name__ == "__main__":
     load_dotenv()
     bot = telegram.Bot(token=os.environ["TELEGRAM_BOT_TOKEN"])
     chat_id = os.environ["TELEGRAM_CHAT_ID"]
-    path_image = os.listdir("image/")
+    image_in_path = os.listdir("image/")
     timer_public = 14400
-    random_photo = random.shuffle(path_image)
-    photo_public(chat_id)
+    random.shuffle(image_in_path)
+    photo_public(chat_id, timer_public, image_in_path)
