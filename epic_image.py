@@ -53,6 +53,6 @@ if __name__ == "__main__":
     load_dotenv()
     os.makedirs("image", mode=0o777, exist_ok=True)
 
-    api_key = os.environ["API_KEY"]
+    api_key = os.environ["NASA_API_KEY"]
     epic_image = nasa_EPIC(api_key)
     EPIC_download(epic_image)
