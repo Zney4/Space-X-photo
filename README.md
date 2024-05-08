@@ -16,7 +16,7 @@ pip install -r requirements.txt
 Файл .env      
 В нём надо указать переменную с api токеном.
 ```
-API_TOKEN=example
+NASA_API_KEY=example
 ```
 
 Api токен можно получить на этом сайте: https://app.bitly.com/https://api.nasa.gov/
