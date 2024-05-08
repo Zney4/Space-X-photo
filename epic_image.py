@@ -4,11 +4,6 @@ import datetime
 from dotenv import load_dotenv
 
 
-def check_file():
-    if not os.path.exists("image"):
-        os.makedirs("image")
-
-
 def nasa_EPIC(api_key):
     params = {"api_key": api_key}
     response = requests.get(
@@ -56,7 +51,7 @@ def format_file(day_image):
 
 if __name__ == "__main__":
     load_dotenv()
-    check_file()
+    os.makedirs("image", mode=0o777, exist_ok=True)
 
     api_key = os.environ["API_KEY"]
     epic_image = nasa_EPIC(api_key)

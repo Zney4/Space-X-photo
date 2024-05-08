@@ -3,11 +3,6 @@ import requests
 from dotenv import load_dotenv
 
 
-def check_file():
-    if not os.path.exists("image"):
-        os.makedirs("image")
-
-
 def nasa_APOD(api_key):
     params = {"api_key": api_key}
     response = requests.get("https://api.nasa.gov/planetary/apod", params=params)
@@ -32,7 +27,7 @@ def format_file(day_image):
 
 if __name__ == "__main__":
     load_dotenv()
-    check_file()
+    os.makedirs("image", mode=0o777, exist_ok=True)
 
     api_key = os.environ["API_KEY"]
     day_image = nasa_APOD(api_key)

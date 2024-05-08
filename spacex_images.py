@@ -3,11 +3,6 @@ import requests
 from dotenv import load_dotenv
 
 
-def check_file():
-    if not os.path.exists("image"):
-        os.makedirs("image")
-
-
 def donload_image(filename, url):
     response = requests.get(url)
     response.raise_for_status()
@@ -35,7 +30,7 @@ def fetch_spacex_last_launch(space_photo_links, filename_space):
 
 if __name__ == "__main__":
     load_dotenv()
-    check_file()
+    os.makedirs("image", mode=0o777, exist_ok=True)
     id = "5eb87d47ffd86e000604b38a"
     filename = "1.jpeg"
     url = "https://upload.wikimedia.org/wikipedia/commons/3/3f/HST-SM4.jpeg"
