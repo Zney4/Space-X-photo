@@ -76,7 +76,7 @@ def EPIC_download(epic_image):
             file.write(photo)
 
 
-def donload_image_APOUD_nasa(day_image, file_format):
+def download_image_APOUD_nasa(day_image, file_format):
     response = requests.get(day_image)
     response.raise_for_status()
 

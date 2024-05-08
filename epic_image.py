@@ -43,12 +43,6 @@ def EPIC_download(epic_image):
             file.write(photo)
 
 
-def format_file(day_image):
-    image_f = os.path.splitext(day_image)
-
-    return image_f[1]
-
-
 if __name__ == "__main__":
     load_dotenv()
     os.makedirs("image", mode=0o777, exist_ok=True)

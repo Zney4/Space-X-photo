@@ -11,18 +11,18 @@ def nasa_APOD(api_key):
     return response.json()["url"]
 
 
-def donload_image_APOUD_nasa(day_image, file_f):
+def download_image_APOUD_nasa(day_image, image_format):
     response = requests.get(day_image)
     response.raise_for_status()
 
-    with open(f"image/ Astronomy Picture of the Day{file_f}", "wb") as file:
+    with open(f"image/ Astronomy Picture of the Day{image_format}", "wb") as file:
         file.write(response.content)
 
 
-def format_file(day_image):
-    image_f = os.path.splitext(day_image)
+def breaks_file(day_image):
+    image_format = os.path.splitext(day_image)
 
-    return image_f[1]
+    return image_format[1]
 
 
 if __name__ == "__main__":
@@ -31,5 +31,5 @@ if __name__ == "__main__":
 
     api_key = os.environ["NASA_API_KEY"]
     day_image = nasa_APOD(api_key)
-    file_f = format_file(day_image)
-    donload_image_APOUD_nasa(day_image, file_f)
+    image_format = breaks_file(day_image)
+    download_image_APOUD_nasa(day_image, image_format)
