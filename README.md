@@ -1,7 +1,7 @@
 # Загрузка фотографий SpaceX
 
 ## Короткое описание проекта
-FullCode_image_space.py - это код, который скачивает фотографии с сайта SpaceX, Nasa и т.д.
+dowload_image_space.py - это код, который скачивает фотографии с сайта SpaceX, Nasa и т.д.
 
 ## Требования к окружению
 Python
@@ -23,12 +23,12 @@ Api токен можно получить на этом сайте: https://app
 
 ## Пример запуска кода
 ```
-python FullCode_image_space.py
+python dowload_image_space.py
 ```
 
 ### Пример результата
 
-Запускаем файл python FullCode_image_space.py, после чего
+Запускаем файл python dowload_image_space.py, после чего
 создается папка image, в которую скачиваются изображения с космосом.
 
 Эти изображение использует телеграм бот - SPACE BOT.py.
