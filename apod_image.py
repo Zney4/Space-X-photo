@@ -29,7 +29,7 @@ if __name__ == "__main__":
     load_dotenv()
     os.makedirs("image", mode=0o777, exist_ok=True)
 
-    api_key = os.environ["API_KEY"]
+    api_key = os.environ["NASA_API_KEY"]
     day_image = nasa_APOD(api_key)
     file_f = format_file(day_image)
     donload_image_APOUD_nasa(day_image, file_f)
