@@ -108,5 +108,5 @@ if __name__ == "__main__":
     day_image = APOD_nasa(api_key)
     epic_image = nasa_EPIC(api_key)
     file_format = breaks_file(day_image)
-    donload_image_APOUD_nasa(day_image, file_format)
+    download_image_APOUD_nasa(day_image, file_format)
     EPIC_download(epic_image)
