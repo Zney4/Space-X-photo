@@ -3,6 +3,7 @@
 ## Короткое описание проекта
 dowload_image_space.py - это код, который скачивает фотографии с сайта SpaceX, Nasa и т.д.
 
+
 ## Требования к окружению
 Python
 
@@ -18,6 +19,14 @@ pip install -r requirements.txt
 ```
 NASA_API_KEY=example
 ```
+
+Для работы бота
+```
+TELEGRAM_BOT_TOKEN=example
+TELEGRAM_CHAT_ID=example
+```
+1. Чтобы получить токен для бота нам нужно обратиться к BotFather в Телеграме: https://t.me/BotFather.
+2. Нам нужно узнать chat_id собеседника с помощью этого бота: https://t.me/LeadConverterToolkitBot.
 
 Api токен можно получить на этом сайте: https://app.bitly.com/https://api.nasa.gov/
 
@@ -40,13 +49,7 @@ python dowload_image_space.py
 ```
 SPACE BOT.py
 ```
-Для того чтобы бот заработал нам нужно заполнить в файле .env эти переменные 
-```
-TELEGRAM_BOT_TOKEN=example
-TELEGRAM_CHAT_ID=example
-```
-1. Чтобы получить токен для бота нам нужно обратиться к BotFather в Телеграме: https://t.me/BotFather.
-2. Нам нужно узнать chat_id собеседника с помощью этого бота: https://t.me/LeadConverterToolkitBot.
+
 
 
 
