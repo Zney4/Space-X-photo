@@ -35,7 +35,7 @@ Api токен можно получить на этом сайте: https://app
 python dowload_image_space.py
 ```
 
-### Для запуска скрипта - apod_image.py
+#### Для запуска скрипта - apod_image.py
 ```
 python apod_image.py
 ```
