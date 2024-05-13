@@ -4,14 +4,6 @@ import datetime
 from dotenv import load_dotenv
 
 
-def download_image(filename, url):
-    response = requests.get(url)
-    response.raise_for_status()
-
-    with open(f"image/{filename}", "wb") as file:
-        file.write(response.content)
-
-
 def get_photo(id):
     response = requests.get(f"https://api.spacexdata.com/v5/launches/{id}")
     response.raise_for_status()
@@ -58,7 +50,6 @@ def nasa_EPIC(api_key):
             f"https://api.nasa.gov/EPIC/archive/natural/{date}/png/{image}.png",
             params=params_1,
         )
-        #                           https://api.nasa.gov/EPIC/archive/natural/03/12/2024/png/epic_1b_20240312003633?api_key=YNmiFmsTDFcAUcpYLZZsQar45WnXER1VnQ9hKFE0
         response.raise_for_status()
 
         image_list_EPIC.append(response_1.content)
@@ -69,9 +60,6 @@ def EPIC_download(epic_image):
     index = 0
     for photo in epic_image:
         index += 1
-        #        response = requests.get(photo)
-        #        response.raise_for_status()
-
         with open(f"image/{index} EPIC image.jpg", "wb") as file:
             file.write(photo)
 
@@ -96,9 +84,6 @@ if __name__ == "__main__":
     os.makedirs("image", mode=0o777, exist_ok=True)
 
     id = "5eb87d47ffd86e000604b38a"
-    filename = "1.jpeg"
-    url = "https://upload.wikimedia.org/wikipedia/commons/3/3f/HST-SM4.jpeg"
-    download_image(filename, url)
 
     space_photo_links = get_photo(id)
     filename_space = "spacex.jpg"
