@@ -30,9 +30,32 @@ TELEGRAM_CHAT_ID=example
 
 Api токен можно получить на этом сайте: https://app.bitly.com/https://api.nasa.gov/
 
-## Пример запуска кода
+## Примеры запуска кода
 ```
 python dowload_image_space.py
+```
+
+#### Для запуска скрипта(загрузка фото) - apod_image.py
+```
+python apod_image.py
+```
+Лучшее фото от NASA.
+
+#### Для запуска скрипта(загрузка фото) - epic_image.py
+```
+python epic_image.py
+```
+Фотографии NASA нашей планеты.
+
+#### Для запуска скрипта(загрузка фото) - spacex_images.py
+```
+python spacex_images.py
+```
+Фотографии с сайта SpaceX.
+
+#### Для запуска телеграмм бота - SPACE_BOT.py
+```
+python SPACE_BOT.py
 ```
 
 ### Пример результата
