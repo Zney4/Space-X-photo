@@ -39,7 +39,7 @@ python dowload_image_space.py
 ```
 python apod_image.py
 ```
-NASA каждый день выбирают лучшее фото и публикуют у себя на сайте.
+Лучшее фото от NASA.
 
 #### Для запуска скрипта(загрузка фото) - epic_image.py
 ```
