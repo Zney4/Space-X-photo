@@ -105,7 +105,7 @@ if __name__ == "__main__":
     fetch_spacex_last_launch(space_photo_links, filename_space)
 
     api_key = os.environ["NASA_API_KEY"]
-    day_image = APOD_nasa(api_key)
+    day_image = receving_nasa_APOD(api_key)
     epic_image = nasa_EPIC(api_key)
     file_format = breaks_file(day_image)
     download_image_APOUD_nasa(day_image, file_format)
