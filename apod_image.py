@@ -3,7 +3,7 @@ import requests
 from dotenv import load_dotenv
 
 
-def nasa_APOD(api_key):
+def receving_nasa_APOD(api_key):
     params = {"api_key": api_key}
     response = requests.get("https://api.nasa.gov/planetary/apod", params=params)
     response.raise_for_status()
