@@ -35,22 +35,22 @@ Api токен можно получить на этом сайте: https://app
 python dowload_image_space.py
 ```
 
-###Для запуска скрипта - apod_image.py
+### Для запуска скрипта - apod_image.py
 ```
 python apod_image.py
 ```
 
-###Для запуска скрипта - epic_image.py
+### Для запуска скрипта - epic_image.py
 ```
 python epic_image.py
 ```
 
-###Для запуска скрипта - spacex_images.py
+### Для запуска скрипта - spacex_images.py
 ```
 python spacex_images.py
 ```
 
-###Для запуска телеграмм бота - SPACE_BOT.py
+### Для запуска телеграмм бота - SPACE_BOT.py
 ```
 python SPACE_BOT.py
 ```
