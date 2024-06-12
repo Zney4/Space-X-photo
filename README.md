@@ -32,9 +32,6 @@ TELEGRAM_CHAT_ID=example
 Api токен можно получить на этом сайте: https://app.bitly.com/https://api.nasa.gov/
 
 ## Примеры запуска кода
-```
-python dowload_image_space.py
-```
 
 #### Для запуска скрипта(загрузка фото) - apod_image.py
 ```
