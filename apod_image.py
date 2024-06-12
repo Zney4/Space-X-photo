@@ -1,35 +1,26 @@
 import os
 import requests
 from dotenv import load_dotenv
+from dowload_image_space import download_images_from_urls
 
 
-def receving_nasa_APOD(api_key):
-    params = {"api_key": api_key}
+def get_apod_photo_links(api_key):
+    params = {"api_key": api_key, "count": 11}
     response = requests.get("https://api.nasa.gov/planetary/apod", params=params)
     response.raise_for_status()
 
-    return response.json()["url"]
+    nasa_images = response.json()
+    image_list = []
+    for img in nasa_images:
+        link = img["url"]
+        image_list.append(link)
 
-
-def download_image_APOUD_nasa(day_image, image_format):
-    response = requests.get(day_image)
-    response.raise_for_status()
-
-    with open(f"image/ Astronomy Picture of the Day{image_format}", "wb") as file:
-        file.write(response.content)
-
-
-def breaks_file(day_image):
-    image_format = os.path.splitext(day_image)
-
-    return image_format[1]
+    return image_list
 
 
 if __name__ == "__main__":
     load_dotenv()
-    os.makedirs("image", mode=0o777, exist_ok=True)
 
     api_key = os.environ["NASA_API_KEY"]
-    day_image = receving_nasa_APOD(api_key)
-    image_format = breaks_file(day_image)
-    download_image_APOUD_nasa(day_image, image_format)
+    apod_images = get_apod_photo_links(api_key)
+    download_images_from_urls(urls=apod_images, file_name_prefix="APOD")

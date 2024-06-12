@@ -1,14 +1,7 @@
 import os
 import requests
 from dotenv import load_dotenv
-
-
-def donload_image(filename, url):
-    response = requests.get(url)
-    response.raise_for_status()
-
-    with open(f"image/{filename}", "wb") as file:
-        file.write(response.content)
+from dowload_image_space import download_images_from_urls
 
 
 def get_photo(id):
@@ -17,27 +10,12 @@ def get_photo(id):
     return response.json()["links"]["flickr"]["original"]
 
 
-def fetch_spacex_last_launch(space_photo_links, filename_space):
-    index = 0
-    for photo in space_photo_links:
-        index += 1
-        response = requests.get(photo)
-        response.raise_for_status()
-
-        with open(f"image/{index}{filename_space}", "wb") as file:
-            file.write(response.content)
-
-
 if __name__ == "__main__":
     load_dotenv()
-    os.makedirs("image", mode=0o777, exist_ok=True)
-    id = "5eb87d47ffd86e000604b38a"
-    filename = "1.jpeg"
-    url = "https://upload.wikimedia.org/wikipedia/commons/3/3f/HST-SM4.jpeg"
-    donload_image(filename, url)
 
+    id = "5eb87d47ffd86e000604b38a"
+    url = "https://upload.wikimedia.org/wikipedia/commons/3/3f/HST-SM4.jpeg"
     space_photo_links = get_photo(id)
-    filename_space = "spacex.jpg"
-    fetch_spacex_last_launch(space_photo_links, filename_space)
 
     api_key = os.environ["NASA_API_KEY"]
+    download_images_from_urls(urls=space_photo_links, file_name_prefix="space")
