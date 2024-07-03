@@ -1,13 +1,17 @@
 import os
-import requests
 from dotenv import load_dotenv
 from dowload_image_space import download_images_from_urls
+from dowload_image_space import fetch_data
 
 
 def get_photo(id):
-    response = requests.get(f"https://api.spacexdata.com/v5/launches/{id}")
-    response.raise_for_status()
-    return response.json()["links"]["flickr"]["original"]
+    spacex_photos = []
+    if id:
+        spacex_photos = fetch_data(
+            f"https://api.spacexdata.com/v5/launches/{id}", None
+        )["links"]["flickr"]["original"]
+
+    return spacex_photos
 
 
 if __name__ == "__main__":

@@ -2,10 +2,17 @@ import os
 import requests
 
 
-def download_images_from_urls(urls, file_name_prefix, api_key=None):
-
+def check_file_path():
     os.makedirs("images", exist_ok=True)
 
+
+def fetch_data(url, params):
+    response = requests.get(url, params=params)
+    response.raise_for_status()
+    return response.json()
+
+
+def download_images_from_urls(urls, file_name_prefix, api_key=None):
     for index, url in enumerate(urls, start=1):
         params = {"api_key": api_key}
         response = requests.get(url, params=params)
