@@ -1,17 +1,14 @@
 import os
 from dotenv import load_dotenv
-from dowload_image_space import fetch_data
+from dowload_image_space import get_request
 from dowload_image_space import download_images_from_urls
 
 
 def get_apod_photo_links(api_key):
     apod_count = 6
+    params = {"api_key": api_key, "count": apod_count}
     apod_photos = [
-        img["url"]
-        for img in fetch_data(
-            "https://api.nasa.gov/planetary/apod",
-            {"api_key": api_key, "count": apod_count},
-        )
+        img["url"] for img in get_request("https://api.nasa.gov/planetary/apod", params)
     ]
 
     return apod_photos
