@@ -2,10 +2,6 @@ import os
 import requests
 
 
-def check_file_path():
-    os.makedirs("images", exist_ok=True)
-
-
 def get_request(url, params):
     response = requests.get(url, params=params)
     response.raise_for_status()
@@ -20,6 +16,7 @@ def download_images_from_urls(urls, file_name_prefix, api_key=None):
         photo = response.content
         ext = get_file_extension(url)
 
+        os.makedirs("images", exist_ok=True)
         with open(f"images/{file_name_prefix}{index}{ext}", "wb") as file:
             file.write(photo)
     print(f"{file_name_prefix} photo download")
